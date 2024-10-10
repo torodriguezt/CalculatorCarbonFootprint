@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculador Huella de Carbono UNAL</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <!-- Enlace al archivo de estilos CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="image_no_background.png" alt="Logo UNAL" class="logo-header">
+            <h1>Calculador Huella de Carbono UNAL</h1>
+        </div>
+        <p>Completa el formulario a continuación para calcular tu huella de carbono.</p>
+    </header>
+
+    <section class="form-section">
+        <form id="carbonForm">
+            <div class="form-group">
+                <label for="dias"><i class="fas fa-calendar-alt"></i> ¿Cuántos días vas a la universidad?</label>
+                <select id="dias" name="dias" required>
+                    <option value="" disabled selected>Selecciona la cantidad de días</option>
+                    <option value="Un día">Un día</option>
+                    <option value="Dos días">Dos días</option>
+                    <option value="Tres días">Tres días</option>
+                    <option value="Cuatro días">Cuatro días</option>
+                    <option value="Cinco días">Cinco días</option>
+                    <option value="Seis días">Seis días</option>
+                    <option value="Siete días">Siete días</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="transporte"><i class="fas fa-bus"></i> Medio de transporte</label>
+                <select id="transporte" name="transporte" required>
+                    <option value="" disabled selected>Selecciona el medio de transporte</option>
+                    <option value="Carro particular">Carro particular</option>
+                    <option value="Moto particular">Moto particular</option>
+                    <option value="Transporte público">Transporte público</option>
+                </select>
+            </div>
+            <div class="form-group" id="kilometrosGroup">
+                <label for="km"><i class="fas fa-road"></i> ¿Cuántos kilómetros recorres diariamente (ida y vuelta)?</label>
+                <input type="number" id="km" name="km" min="0" placeholder="Escribe la cantidad de kilómetros" required>
+            </div>
+            <div class="form-group" id="energiaGroup" style="display:none;">
+                <label for="combustible"><i class="fas fa-gas-pump"></i> Fuente de energía del vehículo</label>
+                <select id="combustible" name="combustible" required>
+                    <option value="" disabled selected>Selecciona un valor</option>
+                    <option value="Gasolina corriente">Gasolina corriente</option>
+                    <option value="Gasolina extra">Gasolina extra</option>
+                    <option value="Diesel">Diesel</option>
+                    <option value="Eléctrico">Eléctrico</option>
+                    <option value="Gas">Gas</option>
+                    <option value="Híbrida">Híbrida</option>
+                </select>
+            </div>
+            <div class="form-group" id="comparteGroup" style="display:none;">
+                <label for="comparte"><i class="fas fa-users"></i> ¿Compartes el vehículo con más personas?</label>
+                <select id="comparte" name="comparte" required>
+                    <option value="" disabled selected>Selecciona un valor</option>
+                    <option value="No">No</option>
+                    <option value="Sí">Sí</option>
+                </select>
+            </div>
+            <div class="form-group" id="pasajerosGroup" style="display:none;">
+                <label for="pasajeros"><i class="fas fa-users"></i> ¿Cuántas personas se transportan en el vehículo (incluyéndote)?</label>
+                <input type="number" id="pasajeros" name="pasajeros" min="1" value="1" required>
+            </div>
+            <div class="form-group" id="publicoGroup" style="display:none;">
+                <label for="publico"><i class="fas fa-subway"></i> ¿Qué transporte público utilizas?</label>
+                <!-- Checkboxes para seleccionar múltiples transportes -->
+                <div>
+                    <input type="checkbox" id="metro" name="publico" value="Metro">
+                    <label for="metro">Metro</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="metroplus" name="publico" value="Metroplús">
+                    <label for="metroplus">Metroplús</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="metrocable" name="publico" value="Metrocable">
+                    <label for="metrocable">Metrocable</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="tranvia" name="publico" value="Tranvía">
+                    <label for="tranvia">Tranvía</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="buses" name="publico" value="Buses">
+                    <label for="buses">Buses</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="taxis" name="publico" value="Taxis">
+                    <label for="taxis">Taxis</label>
+                </div>
+            </div>
+            <button type="submit">Calcular</button>
+        </form>
+        <div id="resultado"></div>
+    </section>
+
+    <!-- Enlace al archivo de JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
