@@ -42,6 +42,9 @@
                     <option value="Carro particular">Carro particular</option>
                     <option value="Moto particular">Moto particular</option>
                     <option value="Transporte público">Transporte público</option>
+                    <option value="Bicicleta">Bicicleta</option>
+                    <option value="Bicicleta eléctrica">Bicicleta eléctrica</option>
+                    <option value="Patineta eléctrica">Patineta eléctrica</option>
                 </select>
             </div>
             <div class="form-group" id="kilometrosGroup">
@@ -70,10 +73,10 @@
             </div>
             <div class="form-group" id="pasajerosGroup" style="display:none;">
                 <label for="pasajeros"><i class="fas fa-users"></i> ¿Cuántas personas se transportan en el vehículo (incluyéndote)?</label>
-                <input type="number" id="pasajeros" name="pasajeros" min="1" value="1" required>
+                <input type="number" id="pasajeros" name="pasajeros" min="2" value="1" required>
             </div>
             <div class="form-group" id="publicoGroup" style="display:none;">
-                <label for="publico"><i class="fas fa-subway"></i> ¿Qué transporte público utilizas?</label>
+                <label for="publico"><i class="fas fa-subway"></i> ¿Qué transporte público utilizas? (Selecciona máximo 3)</label>
                 <!-- Checkboxes para seleccionar múltiples transportes -->
                 <div>
                     <input type="checkbox" id="metro" name="publico" value="Metro">

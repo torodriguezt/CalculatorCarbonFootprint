@@ -129,3 +129,23 @@ button[type="submit"]:hover {
     color: #28a745; /* Color verde para resaltar el número */
     font-size: 2rem; /* Tamaño más grande */
 }
+
+/* Mejora la estética en pantallas pequeñas */
+@media (max-width: 600px) {
+    form {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .form-group label {
+        font-size: 0.9rem;
+    }
+
+    button[type="submit"] {
+        font-size: 1rem;
+        padding: 12px;
+    }
+}
